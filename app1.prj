@@ -1,9 +1,9 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
   <configuration file="E:\Personal\Study\CoOp Work\CSP_App\app1.prj" location="E:\Personal\Study\CoOp Work\CSP_App" name="app1" target="target.ezdeploy.standalone" target-name="Application Compiler">
-    <param.appname>CSP_app</param.appname>
+    <param.appname>app1</param.appname>
     <param.icon />
     <param.icons />
-    <param.version>1.0</param.version>
+    <param.version>2.0</param.version>
     <param.authnamewatermark>MARUF AHMAD</param.authnamewatermark>
     <param.email>mah370@uregina.ca</param.email>
     <param.company>urneurolab.com</param.company>
@@ -11,7 +11,7 @@
     <param.description />
     <param.screenshot />
     <param.guid />
-    <param.installpath.string>\urneurolab.com\CSP_app\</param.installpath.string>
+    <param.installpath.string>\urneurolab.com\app1\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
     <param.logo />
     <param.install.notes />
@@ -45,7 +45,6 @@
     <unset>
       <param.icon />
       <param.icons />
-      <param.version />
       <param.description />
       <param.screenshot />
       <param.guid />
@@ -80,11 +79,14 @@
     </fileset.main>
     <fileset.resources />
     <fileset.package />
-    <fileset.depfun />
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\app2.mlapp</file>
+      <file>${PROJECT_ROOT}\calib.mlapp</file>
+    </fileset.depfun>
     <build-deliverables>
       <file location="${PROJECT_ROOT}\app1\for_testing" name="readme.txt" optional="true">E:\Personal\Study\CoOp Work\CSP_App\app1\for_testing\readme.txt</file>
       <file location="${PROJECT_ROOT}\app1\for_testing" name="splash.png" optional="false">E:\Personal\Study\CoOp Work\CSP_App\app1\for_testing\splash.png</file>
-      <file location="${PROJECT_ROOT}\app1\for_testing" name="CSP_app.exe" optional="false">E:\Personal\Study\CoOp Work\CSP_App\app1\for_testing\CSP_app.exe</file>
+      <file location="${PROJECT_ROOT}\app1\for_testing" name="app1.exe" optional="false">E:\Personal\Study\CoOp Work\CSP_App\app1\for_testing\app1.exe</file>
     </build-deliverables>
     <workflow />
     <matlab>
@@ -95,8 +97,8 @@
         <toolbox name="gpucoder" />
         <toolbox name="fixedpoint" />
         <toolbox name="matlabhdlcoder" />
-        <toolbox name="polyspacebugfinder" />
         <toolbox name="neuralnetwork" />
+        <toolbox name="polyspacebugfinder" />
       </toolboxes>
       <toolbox>
         <matlabcoder>
@@ -124,14 +126,14 @@
         </matlabhdlcoder>
       </toolbox>
       <toolbox>
-        <polyspacebugfinder>
-          <enabled>true</enabled>
-        </polyspacebugfinder>
-      </toolbox>
-      <toolbox>
         <neuralnetwork>
           <enabled>true</enabled>
         </neuralnetwork>
+      </toolbox>
+      <toolbox>
+        <polyspacebugfinder>
+          <enabled>true</enabled>
+        </polyspacebugfinder>
       </toolbox>
     </matlab>
     <platform>

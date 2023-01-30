@@ -1,6 +1,10 @@
-plainData = plainData;
+plainData = plainData2;
 
-hpData = highpass(plainData.Amplitude,80,1e3);
+hpData = highpass(plainData.Amplitude,50,1e3);
+figure; plot(plainData.Time,hpData);
+hpData = highpass(hpData,50,1e3);
+figure; plot(plainData.Time,hpData);
+hpData = highpass(hpData,50,1e3);
 
 f1 = figure;
 f1.Position=[-30   250   560   420];
