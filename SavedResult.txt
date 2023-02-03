@@ -1,0 +1,23 @@
+
+CSP Sample 1 : Not Detected
+CSP Sample 2 : 0.14325 ms
+CSP Sample 3 : Not Detected
+CSP Sample 4 : 0.053 ms
+CSP Sample 5 : 0.0965 ms
+CSP Sample 6 : 0.147 ms
+CSP Sample 7 : 0.132 ms
+CSP Sample 8 : 0.05 ms
+CSP Sample 9 : 0.1495 ms
+CSP Sample 10 : 0.09475 ms
+CSP Sample 11 : 0.249 ms
+CSP Sample 12 : 0.11225 ms
+CSP Sample 13 : 0.18225 ms
+CSP Sample 14 : Not Detected
+CSP Sample 15 : 0.14675 ms
+CSP Sample 16 : 0.1755 ms
+CSP Sample 17 : 0.05125 ms
+CSP Sample 18 : 0.223 ms
+CSP Sample 19 : Not Detected
+CSP Sample 20 : 0.1505 ms
+
+Avg. CSP: 0.13478 ms
