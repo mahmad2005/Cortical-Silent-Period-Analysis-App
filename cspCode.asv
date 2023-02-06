@@ -1,8 +1,6 @@
 plainData = Data07;
-startPoint = 6025;
-endPoint = startPoint+1999;
-Time = plainData.Time(startPoint:endPoint);
-Amplitude = plainData.Amplitude(startPoint:endPoint);
+Time = Data07.Time(7:2006)
+Amplitude = Data07.Amplitude(7:2006)
 
 hpData = highpass(Amplitude,50,1e3);
 figure; plot(Time,hpData);
@@ -45,7 +43,7 @@ spOnSet = 0;
 spOnSetIndex =0;
 
 for i = (zeroTime+20):length(Amplitude)
-    if Amplitude(i) <= -0.11
+    if Amplitude(i) <= -0.2
         spOnSet = Time(i);
         spOnSetIndex = i;
         break;
