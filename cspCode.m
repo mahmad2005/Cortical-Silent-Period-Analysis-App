@@ -1,5 +1,5 @@
 plainData = Data07;
-startPoint = 6025;
+startPoint = 10037; %7, 2013, 4019, 6025, 8031, 10037
 endPoint = startPoint+1999;
 Time = plainData.Time(startPoint:endPoint);
 Amplitude = plainData.Amplitude(startPoint:endPoint);
@@ -81,3 +81,48 @@ CorticalSilentPeriod = spOffSet - spOnSet;
 
 txt = ['CSP: ' num2str(CorticalSilentPeriod) ' ms'];
 text(spOnSet+0.01,-0.10,txt);
+
+figure;
+fp = islocalmin(Amplitude);
+plot(Time, (fp));
+
+x = Time;
+A = Amplitude;
+TF = islocalmin(A);
+%plot(x,A,x(TF),A(TF),'r*');
+plot(x,A);
+hold on;
+stp = zeroTime+20;
+cutAmp = Amplitude(stp:2000);
+[maxVal,maxInx] = max(cutAmp);
+[minVal,minInx] = min(cutAmp);
+maxInx_stp = maxInx+stp-1;
+minInx_stp = minInx+stp-1;
+plot(Time(maxInx_stp), Amplitude(maxInx_stp), '-o');
+hold on;
+plot(Time(minInx_stp), Amplitude(minInx_stp), '-o');
+
+% xPosition = round((minInx_stp+maxInx_stp)/2);
+% lineX1 = [Time(xPosition) Time(xPosition)];
+% lineY1 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
+% line(lineX1, lineY1,Color="red");
+
+lineX2 = [Time(minInx_stp) Time(maxInx_stp)];
+lineY2 = [Amplitude(maxInx_stp) Amplitude(maxInx_stp)];
+line(lineX2, lineY2,Color="red");
+
+lineX3 = [Time(minInx_stp) Time(maxInx_stp)];
+lineY3 = [Amplitude(minInx_stp) Amplitude(minInx_stp)];
+line(lineX3, lineY3,Color="red");
+
+lineX4 = [Time(maxInx_stp) Time(maxInx_stp)];
+lineY4 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
+line(lineX4, lineY4,Color="red");
+
+lineX5 = [Time(minInx_stp) Time(minInx_stp)];
+lineY5 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
+line(lineX5, lineY5,Color="red");
+
+motorPotential = Amplitude(maxInx_stp) - Amplitude(minInx_stp);
+txt = ['Potential: ' num2str(motorPotential) ' mV'];
+text(Time(minInx_stp),-0.40,txt);
