@@ -125,4 +125,4 @@ line(lineX5, lineY5,Color="red");
 
 motorPotential = Amplitude(maxInx_stp) - Amplitude(minInx_stp);
 txt = ['Potential: ' num2str(motorPotential) ' mV'];
-text(Time(minInx_stp),-0.40,txt);
+text(Time(minInx_stp),Amplitude(minInx_stp)-0.40,txt);
