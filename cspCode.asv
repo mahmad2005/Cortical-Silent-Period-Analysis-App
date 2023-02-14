@@ -111,43 +111,34 @@ lineX2 = [Time(minInx_stp) Time(maxInx_stp)];
 lineY2 = [Amplitude(maxInx_stp) Amplitude(maxInx_stp)];
 line(lineX2, lineY2,Color="red");
 
-% lineX3 = [Time(minInx_stp) Time(maxInx_stp)];
-% lineY3 = [Amplitude(minInx_stp) Amplitude(minInx_stp)];
-% line(lineX3, lineY3,Color="red");
-% 
-% lineX4 = [Time(maxInx_stp) Time(maxInx_stp)];
-% lineY4 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
-% line(lineX4, lineY4,Color="red");
-% 
-% lineX5 = [Time(minInx_stp) Time(minInx_stp)];
-% lineY5 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
-% line(lineX5, lineY5,Color="red");
+lineX3 = [Time(minInx_stp) Time(maxInx_stp)];
+lineY3 = [Amplitude(minInx_stp) Amplitude(minInx_stp)];
+line(lineX3, lineY3,Color="red");
+
+lineX4 = [Time(maxInx_stp) Time(maxInx_stp)];
+lineY4 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
+line(lineX4, lineY4,Color="red");
+
+lineX5 = [Time(minInx_stp) Time(minInx_stp)];
+lineY5 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
+line(lineX5, lineY5,Color="red");
 
 motorPotential = Amplitude(maxInx_stp) - Amplitude(minInx_stp);
 txt = ['Potential: ' num2str(motorPotential) ' mV'];
 text(Time(minInx_stp),Amplitude(minInx_stp)-0.40,txt);
 
-%hold on;
-% [px,py]= ginput(1);
-% plot(px,py,'*');
-buton= 0;
-cnt = 0;
-roi_x=zeros;
-roi_y=zeros;
+hold on;
+[px,py]= ginput(1);
+plot(px,py,'*');
+
 while 1
-    [px,py,buton]= ginput(1);
+    [px,py,clicked]= ginput(1);
     plot(px,py,'*');
-    lineX6 = [px px];
-    lineY6 = [py-0.5 py+0.5];
-    line(lineX6, lineY6,Color="red");
-    if buton == 1
-        cnt = cnt+1;
-        roi_x(cnt)=px;
-        roi_y(cnt)=py;
-        button =0;
-        if cnt ==2 
-            break;
-        end
+    lineX3 = [px py];
+    lineY3 = [py Amplitude(minInx_stp)];
+    line(lineX3, lineY3,Color="red");
+    if clicked == 1
+        break;
     end
 end 
-hold off;
+%hold off;
