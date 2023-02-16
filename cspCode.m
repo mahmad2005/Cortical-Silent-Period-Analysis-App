@@ -1,3 +1,4 @@
+%format long;
 Data =readcell("Data2.txt");
 plainData = Data07;
 startPoint = 10037; %7, 2013, 4019, 6025, 8031, 10037
@@ -93,24 +94,24 @@ TF = islocalmin(A);
 %plot(x,A,x(TF),A(TF),'r*');
 plot(x,A);
 hold on;
-stp = zeroTime+20;
-cutAmp = Amplitude(stp:2000);
-[maxVal,maxInx] = max(cutAmp);
-[minVal,minInx] = min(cutAmp);
-maxInx_stp = maxInx+stp-1;
-minInx_stp = minInx+stp-1;
-plot(Time(maxInx_stp), Amplitude(maxInx_stp), '-o');
-hold on;
-plot(Time(minInx_stp), Amplitude(minInx_stp), '-o');
+% stp = zeroTime+20;
+% cutAmp = Amplitude(stp:2000);
+% [maxVal,maxInx] = max(cutAmp);
+% [minVal,minInx] = min(cutAmp);
+% maxInx_stp = maxInx+stp-1;
+% minInx_stp = minInx+stp-1;
+% plot(Time(maxInx_stp), Amplitude(maxInx_stp), '-o');
+% hold on;
+% plot(Time(minInx_stp), Amplitude(minInx_stp), '-o');
 
 % xPosition = round((minInx_stp+maxInx_stp)/2);
 % lineX1 = [Time(xPosition) Time(xPosition)];
 % lineY1 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
 % line(lineX1, lineY1,Color="red");
 
-lineX2 = [Time(minInx_stp) Time(maxInx_stp)];
-lineY2 = [Amplitude(maxInx_stp) Amplitude(maxInx_stp)];
-line(lineX2, lineY2,Color="red");
+% lineX2 = [Time(minInx_stp) Time(maxInx_stp)];
+% lineY2 = [Amplitude(maxInx_stp) Amplitude(maxInx_stp)];
+% line(lineX2, lineY2,Color="red");
 
 % lineX3 = [Time(minInx_stp) Time(maxInx_stp)];
 % lineY3 = [Amplitude(minInx_stp) Amplitude(minInx_stp)];
@@ -124,9 +125,9 @@ line(lineX2, lineY2,Color="red");
 % lineY5 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
 % line(lineX5, lineY5,Color="red");
 
-motorPotential = Amplitude(maxInx_stp) - Amplitude(minInx_stp);
-txt = ['Potential: ' num2str(motorPotential) ' mV'];
-text(Time(minInx_stp),Amplitude(minInx_stp)-0.40,txt);
+% motorPotential = Amplitude(maxInx_stp) - Amplitude(minInx_stp);
+% txt = ['Potential: ' num2str(motorPotential) ' mV'];
+% text(Time(minInx_stp),Amplitude(minInx_stp)-0.40,txt);
 
 %hold on;
 % [px,py]= ginput(1);
@@ -150,5 +151,20 @@ while 1
             break;
         end
     end
-end 
+end
+
+[~,startTime]=min(abs(Time-roi_x(1)));  % find index where the roi_x(1) is closest
+[~,endTime]=min(abs(Time-roi_x(2)));
+%startTime = find(Time == roi_x(1));
+%endTime = find(Time == roi_x(2));
+stp = startTime;
+cutAmp = Amplitude(stp:endTime);
+[maxVal,maxInx] = max(cutAmp);
+[minVal,minInx] = min(cutAmp);
+maxInx_stp = maxInx+stp-1;
+minInx_stp = minInx+stp-1;
+plot(Time(maxInx_stp), Amplitude(maxInx_stp), '-o');
+hold on;
+plot(Time(minInx_stp), Amplitude(minInx_stp), '-o');
+
 hold off;
