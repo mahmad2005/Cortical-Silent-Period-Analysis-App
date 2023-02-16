@@ -1,3 +1,4 @@
+Data =readcell("Data2.txt");
 plainData = Data07;
 startPoint = 10037; %7, 2013, 4019, 6025, 8031, 10037
 endPoint = startPoint+1999;
@@ -14,17 +15,17 @@ f1 = figure;
 f1.Position=[-30   250   560   420];
 plot(Time, hpData);
 
-meanHPdata = 0;
+meanHPdata = zeros;
 for i = 1:length(hpData)
     meanHPdata(i) = mean(hpData);
-    i = i+1;
+    %i = i+1;
 end 
 
 hold on;
 plot(Time, meanHPdata);
 
 
-rectHPdata = 0;
+rectHPdata = zeros;
 for i = 1:length(hpData)
     if hpData(i)> mean(hpData)
         rectHPdata(i) = mean(hpData);
