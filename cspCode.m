@@ -132,7 +132,7 @@ hold on;
 %hold on;
 % [px,py]= ginput(1);
 % plot(px,py,'*');
-buton= 0;
+%buton= 0;
 cnt = 0;
 roi_x=zeros;
 roi_y=zeros;
@@ -146,7 +146,7 @@ while 1
         cnt = cnt+1;
         roi_x(cnt)=px;
         roi_y(cnt)=py;
-        button =0;
+        %buton =0;
         if cnt ==2 
             break;
         end
