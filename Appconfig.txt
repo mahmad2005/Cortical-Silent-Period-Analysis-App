@@ -1,3 +1,4 @@
-50
-0.021
-0.06
+50	FrqPass
+0.021	ThLvl
+0.06	SPsearch
+592	810	ROI
