@@ -52,16 +52,33 @@ plot(TimeD(EMGD_index), EMGD(EMGD_index), '-o')
 hold on;
 plot(TimeD(EMGD_index), ForceD(EMGD_index), '-o');
 
+
 [~,idx] = max(ForceD(EMGD_index(1): EMGD_index(1)+600));
 hold on;
 plot(TimeD(EMGD_index(1)+idx), ForceD(EMGD_index(1)+idx), '-o');
+intTwitchHeight_1 = abs(ForceD(EMGD_index(1)+idx) - ForceD(EMGD_index(1)));
+txt = ['iT_1: ' num2str(intTwitchHeight_1)];
+text(TimeD(EMGD_index(1)+idx+10),ForceD(EMGD_index(1)+idx+20)-0.10,txt);
+lineX = [TimeD(EMGD_index(1)+idx) TimeD(EMGD_index(1)+idx)];
+lineY = [ForceD(EMGD_index(1)+idx) ForceD(EMGD_index(1))];
+line( lineX,lineY,Color="red");
+
+
+
 
 
 [~,idx] = max(ForceD(EMGD_index(2): EMGD_index(2)+600));
 hold on;
 plot(TimeD(EMGD_index(2)+idx), ForceD(EMGD_index(2)+idx), '-o');
+intTwitchHeight_2 = abs(ForceD(EMGD_index(2)+idx) - ForceD(EMGD_index(2)));
+txt = ['iT_2: ' num2str(intTwitchHeight_2)];
+text(TimeD(EMGD_index(2)+idx+10),ForceD(EMGD_index(2)+idx+20)-0.10,txt);
+
 
 
 [~,idx] = max(ForceD(EMGD_index(3): EMGD_index(3)+600));
 hold on;
 plot(TimeD(EMGD_index(3)+idx), ForceD(EMGD_index(3)+idx), '-o');
+intTwitchHeight_3 = abs(ForceD(EMGD_index(3)+idx) - ForceD(EMGD_index(3)));
+txt = ['iT_3: ' num2str(intTwitchHeight_3)];
+text(TimeD(EMGD_index(3)+idx+10),ForceD(EMGD_index(3)+idx+20)-0.10,txt);

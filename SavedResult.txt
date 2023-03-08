@@ -1,23 +1,21 @@
 
-CSP Sample 1 : 0.0815 ms
-CSP Sample 2 : 0.1985 ms
-CSP Sample 3 : 0.075 ms
-CSP Sample 4 : 0.223 ms
-CSP Sample 5 : 0.10625 ms
-CSP Sample 6 : 0.10225 ms
-CSP Sample 7 : 0.21825 ms
+CSP Sample 1 : 0.117 ms
+CSP Sample 2 : Not Detected
+CSP Sample 3 : 0.1205 ms
+CSP Sample 4 : Not Detected
+CSP Sample 5 : 0.13175 ms
+CSP Sample 6 : 0.13225 ms
+CSP Sample 7 : Not Detected
 CSP Sample 8 : Not Detected
-CSP Sample 9 : 0.39625 ms
-CSP Sample 10 : Not Detected
+CSP Sample 9 : Not Detected
+CSP Sample 10 : 0.123 ms
 CSP Sample 11 : Not Detected
-CSP Sample 12 : 0.20825 ms
-CSP Sample 13 : 0.2425 ms
-CSP Sample 14 : 0.09625 ms
-CSP Sample 15 : 0.22775 ms
-CSP Sample 16 : 0.21875 ms
-CSP Sample 17 : 0.21575 ms
+CSP Sample 12 : 0.12725 ms
+CSP Sample 13 : 0.1325 ms
+CSP Sample 14 : Not Detected
+CSP Sample 15 : 0.13625 ms
+CSP Sample 16 : 0.12175 ms
+CSP Sample 17 : Not Detected
 CSP Sample 18 : Not Detected
-CSP Sample 19 : 0.1915 ms
-CSP Sample 20 : Not Detected
 
-Avg. CSP: 0.18678 ms
+Avg. CSP: 0.12692 ms
