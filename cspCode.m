@@ -84,9 +84,15 @@ CorticalSilentPeriod = spOffSet - spOnSet;
 txt = ['CSP: ' num2str(CorticalSilentPeriod) ' ms'];
 text(spOnSet+0.01,-0.10,txt);
 
+[maxVal,maxInx] = max(Amplitude(zeroTime+20:length(Amplitude)));
+plot(Time(maxInx+zeroTime+19), maxVal, '-o');
+
 figure;
 fp = islocalmin(Amplitude);
 plot(Time, (fp));
+
+
+
 
 x = Time;
 A = Amplitude;
@@ -168,3 +174,4 @@ hold on;
 plot(Time(minInx_stp), Amplitude(minInx_stp), '-o');
 
 hold off;
+
