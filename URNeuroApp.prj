@@ -3,7 +3,7 @@
     <param.appname>URNeuroApp</param.appname>
     <param.icon />
     <param.icons />
-    <param.version>1.0</param.version>
+    <param.version>3.0</param.version>
     <param.authnamewatermark>Maruf</param.authnamewatermark>
     <param.email>mah370@uregina.ca</param.email>
     <param.company>UR-NeuroLAB</param.company>
@@ -45,7 +45,6 @@
     <unset>
       <param.icon />
       <param.icons />
-      <param.version />
       <param.description />
       <param.screenshot />
       <param.guid />
