@@ -8,7 +8,7 @@
     <param.email>mah370@uregina.ca</param.email>
     <param.company>UR-NeuroLAB</param.company>
     <param.summary>This app is developed by URNeuroLab for the CSP and MEPE analysis.</param.summary>
-    <param.description>17-04-2023</param.description>
+    <param.description>05-05-2023</param.description>
     <param.screenshot />
     <param.guid />
     <param.installpath.string>\UR-NeuroLAB\URNeuroApp\</param.installpath.string>
@@ -43,7 +43,7 @@
 	 -?  print help on how to use the application 
 	 input arguments 
  Description 
- 	 17-04-2023</param.help.text>
+ 	 05-05-2023</param.help.text>
     <unset>
       <param.icon />
       <param.icons />

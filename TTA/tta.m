@@ -67,7 +67,8 @@ Beep = BeepD';
 
 
 % Foot_Padel =str2double(Foot_Padel);
-% Time = str2double(Time); 
+% Time = str2double(Time);
+
 
 plot(Time, Foot_Padel);
 hold on;
