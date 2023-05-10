@@ -2,7 +2,6 @@ clf;
 %Data =readcell("dmm_hnlc.txt");
 startPoint = 7; %7, 2013, 4019, 6025, 8031, 10037
 endPoint = startPoint+100999;
-TimeFull = Data(1:length(Data), 1);
 Time = Data(startPoint:endPoint,1);
 Foot_Padel = Data(startPoint:endPoint,5);
 Beep = Data(startPoint:endPoint,6);
@@ -82,14 +81,8 @@ plot(Time(SpikePosition), Beep(SpikePosition), '-o');
 f1 = figure;
 plot(Time, Beep);
 
+Interval=
 
-
-IntervalIndx = zeros;
-j=1;
-for i = 1:length(TimeFull)
-    if num2str(TimeFull{i}) == "Interval="
-        IntervalIndx(j) = i;
-        j = j+1;
-    end
-    %TimeD(i) = Time{i};
+for i = 1:length(Time)
+    TimeD(i) = Time{i};
 end 
