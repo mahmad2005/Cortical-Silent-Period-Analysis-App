@@ -1,20 +1,49 @@
 clf;
-%Data =readcell("dmm_hnlc.txt");
-startPoint = 7; %7, 2013, 4019, 6025, 8031, 10037
-endPoint = startPoint+100999;
+SampleNumber = 2;
+PadelThreshold = 2;
+BeepThreshold = 2; % 0.04
+
+%Data =readcell("dmm_lnhc.txt");
+%Data =readcell("DMM_lnlc.txt");
+Data =readcell("dmm_hnlc.txt");
+%startPoint = 7; %7, 2013, 4019, 6025, 8031, 10037
+%endPoint = startPoint+100999;
 TimeFull = Data(1:length(Data), 1);
-Time = Data(startPoint:endPoint,1);
+%Time = Data(startPoint:endPoint,1);
+% Foot_Padel = Data(startPoint:endPoint,5);
+% Beep = Data(startPoint:endPoint,6);
+
+
+IntervalIndx = zeros;
+j=0;
+for i = 1:length(TimeFull)
+    if num2str(TimeFull{i}) == "Interval="
+        j = j+1;
+        IntervalIndx(j) = i;
+    end
+    if i == length(TimeFull)
+        j = j+1;
+        IntervalIndx(j) = i+1;
+    end 
+end 
+
+%SampleLength = IntervalIndx(2)-7;
+
+startPoint = IntervalIndx(SampleNumber)+6;
+endPoint = IntervalIndx(SampleNumber+1)-1;
+SampleLength = endPoint - startPoint+1;
+
 Foot_Padel = Data(startPoint:endPoint,5);
 Beep = Data(startPoint:endPoint,6);
-
+Time = Data(startPoint:endPoint,1);
 
 TimeD =zeros;
-for i = 1:length(Time)
+for i = 1:SampleLength %length(Time)
     TimeD(i) = Time{i};
 end 
 
 Foot_PadelD=zeros;
-for i = 1:length(Foot_Padel)
+for i = 1:SampleLength %length(Foot_Padel)
 
     Foot_PadelD(i) = Foot_Padel{i};
     if isnan(Foot_PadelD(i))
@@ -23,7 +52,7 @@ for i = 1:length(Foot_Padel)
 end 
 
 BeepD = zeros;
-for i = 1:length(Beep)
+for i = 1:SampleLength %length(Beep)
 
     BeepD(i) = Beep{i};
     if isnan(BeepD(i))
@@ -32,32 +61,49 @@ for i = 1:length(Beep)
 end 
 
 refLine = zeros;
-for i = 1:length(Beep)
+for i = 1: SampleLength %length(Beep)
 
-    refLine(i) = 0.04;
+    refLine(i) = BeepThreshold;
 %     if isnan(BeepD(i))
 %         BeepD(i) = Foot_PadelD(i-1);
 %     end
 end 
 
-SpikePosition = zeros;
-SpikeDetected = 0;
+BeepPosition = zeros;
+BeepDetected = 0;
+ResponsePosition =  zeros;
+ResponseDetected = 0;
+
+BeepPositionBefResp = zeros;
+LastBeepPosition = 0;
 j=1;
+k=1;
 Timer =0;
-for i = 1:length(Beep)
-    if SpikeDetected == 0
-        if BeepD(i) > 0.04
-            SpikePosition(j) = i;
-            SpikeDetected = 1;
+for i = 1:SampleLength %length(Beep)
+    if BeepDetected == 0
+        if BeepD(i) > BeepThreshold
+            BeepPosition(j) = i;
+            LastBeepPosition = i;
+            BeepDetected = 1;
             j = j+1;
+            ResponseDetected = 0;
         end
     else
         if Timer >= 3000
-            SpikeDetected =0;
+            BeepDetected =0;
+            
             Timer = 0;
-            SpikePosition(j) = i;
+            BeepPosition(j) = i;
             j = j+1;
         end
+        if ResponseDetected ==0
+            if Foot_PadelD(i)>= PadelThreshold
+                ResponseDetected = 1;
+                ResponsePosition(k) = i;
+                BeepPositionBefResp(k) = LastBeepPosition; 
+                k=k+1;
+            end
+        end 
         Timer = Timer+1;
     end
 end 
@@ -70,6 +116,8 @@ Beep = BeepD';
 % Foot_Padel =str2double(Foot_Padel);
 % Time = str2double(Time);
 
+OddBeepPosition = BeepPosition(1:2:end);
+
 
 plot(Time, Foot_Padel);
 hold on;
@@ -77,19 +125,26 @@ plot(Time, Beep);
 hold on;
 plot(Time, refLine);
 hold on; 
-plot(Time(SpikePosition), Beep(SpikePosition), '-o');
+plot(Time(BeepPosition), Beep(BeepPosition), '-o');
+hold on;
+plot(Time(ResponsePosition), Foot_Padel(ResponsePosition), '-o');
+hold on;
+plot(Time(BeepPositionBefResp), Beep(BeepPositionBefResp)+10, '-o');
 
-f1 = figure;
+f2 = figure;
+plot(Time,Foot_Padel);
+
+f3 = figure;
 plot(Time, Beep);
 
 
-
-IntervalIndx = zeros;
 j=1;
-for i = 1:length(TimeFull)
-    if num2str(TimeFull{i}) == "Interval="
-        IntervalIndx(j) = i;
-        j = j+1;
-    end
-    %TimeD(i) = Time{i};
+Beep_to_Resp = zeros;
+for i = 1:length(BeepPositionBefResp)
+    Beep_to_Resp(i) = Time(ResponsePosition(i)) - Time(BeepPositionBefResp(i));
 end 
+
+
+
+f4 = figure;
+plot(BeepPositionBefResp,Beep_to_Resp);

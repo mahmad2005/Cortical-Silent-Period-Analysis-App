@@ -5,9 +5,10 @@
 % Time = plainData.Time(startPoint:endPoint);
 % Amplitude = plainData.Amplitude(startPoint:endPoint);
 
-Data =readcell("FDI_CSP_PRE_06.txt");
-startPoint = 7; %7, 2013, 4019, 6025, 8031, 10037
-endPoint = startPoint+1999;
+Data =readcell("CSP_FDI_PRE_01.txt");
+nn = 1;
+startPoint = 7*nn+(1199*(nn-1)); %7, 2013, 4019, 6025, 8031, 10037
+endPoint = startPoint+1199;
 Time = Data(startPoint:endPoint,1);
 Amplitude = Data(startPoint:endPoint,2);
 
@@ -152,21 +153,90 @@ text(spOnSet+0.01,-0.10,txt);
 plot(Time(maxInx+zeroTime+19), maxVal, '-o');
 
 
-f7 = figure;                %%%%%%%%%% figure 7
-fp = islocalmin(Amplitude);
-plot(Time, (fp));
 
 
 
 
-x = Time;
-A = Amplitude;
-TF = islocalmin(A);
-%plot(x,A,x(TF),A(TF),'r*');
-plot(x,A);
-hold on;
-% stp = zeroTime+20;
-% cutAmp = Amplitude(stp:2000);
+% 
+% 
+% f7 = figure;                %%%%%%%%%% figure 7
+% fp = islocalmin(Amplitude);
+% plot(Time, (fp));
+% 
+% 
+% 
+% 
+% x = Time;
+% A = Amplitude;
+% TF = islocalmin(A);
+% %plot(x,A,x(TF),A(TF),'r*');
+% plot(x,A);
+% hold on;
+% % stp = zeroTime+20;
+% % cutAmp = Amplitude(stp:2000);
+% % [maxVal,maxInx] = max(cutAmp);
+% % [minVal,minInx] = min(cutAmp);
+% % maxInx_stp = maxInx+stp-1;
+% % minInx_stp = minInx+stp-1;
+% % plot(Time(maxInx_stp), Amplitude(maxInx_stp), '-o');
+% % hold on;
+% % plot(Time(minInx_stp), Amplitude(minInx_stp), '-o');
+% 
+% % xPosition = round((minInx_stp+maxInx_stp)/2);
+% % lineX1 = [Time(xPosition) Time(xPosition)];
+% % lineY1 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
+% % line(lineX1, lineY1,Color="red");
+% 
+% % lineX2 = [Time(minInx_stp) Time(maxInx_stp)];
+% % lineY2 = [Amplitude(maxInx_stp) Amplitude(maxInx_stp)];
+% % line(lineX2, lineY2,Color="red");
+% 
+% % lineX3 = [Time(minInx_stp) Time(maxInx_stp)];
+% % lineY3 = [Amplitude(minInx_stp) Amplitude(minInx_stp)];
+% % line(lineX3, lineY3,Color="red");
+% % 
+% % lineX4 = [Time(maxInx_stp) Time(maxInx_stp)];
+% % lineY4 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
+% % line(lineX4, lineY4,Color="red");
+% % 
+% % lineX5 = [Time(minInx_stp) Time(minInx_stp)];
+% % lineY5 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
+% % line(lineX5, lineY5,Color="red");
+% 
+% % motorPotential = Amplitude(maxInx_stp) - Amplitude(minInx_stp);
+% % txt = ['Potential: ' num2str(motorPotential) ' mV'];
+% % text(Time(minInx_stp),Amplitude(minInx_stp)-0.40,txt);
+% 
+% %hold on;
+% % [px,py]= ginput(1);
+% % plot(px,py,'*');
+% %buton= 0;
+% cnt = 0;
+% roi_x=zeros;
+% roi_y=zeros;
+% while 1
+%     [px,py,buton]= ginput(1);
+%     plot(px,py,'*');
+%     lineX6 = [px px];
+%     lineY6 = [py-0.5 py+0.5];
+%     line(lineX6, lineY6,Color="red");
+%     if buton == 1
+%         cnt = cnt+1;
+%         roi_x(cnt)=px;
+%         roi_y(cnt)=py;
+%         %buton =0;
+%         if cnt ==2 
+%             break;
+%         end
+%     end
+% end
+% 
+% [~,startTime]=min(abs(Time-roi_x(1)));  % find index where the roi_x(1) is closest
+% [~,endTime]=min(abs(Time-roi_x(2)));
+% %startTime = find(Time == roi_x(1));
+% %endTime = find(Time == roi_x(2));
+% stp = startTime;
+% cutAmp = Amplitude(stp:endTime);
 % [maxVal,maxInx] = max(cutAmp);
 % [minVal,minInx] = min(cutAmp);
 % maxInx_stp = maxInx+stp-1;
@@ -174,69 +244,6 @@ hold on;
 % plot(Time(maxInx_stp), Amplitude(maxInx_stp), '-o');
 % hold on;
 % plot(Time(minInx_stp), Amplitude(minInx_stp), '-o');
-
-% xPosition = round((minInx_stp+maxInx_stp)/2);
-% lineX1 = [Time(xPosition) Time(xPosition)];
-% lineY1 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
-% line(lineX1, lineY1,Color="red");
-
-% lineX2 = [Time(minInx_stp) Time(maxInx_stp)];
-% lineY2 = [Amplitude(maxInx_stp) Amplitude(maxInx_stp)];
-% line(lineX2, lineY2,Color="red");
-
-% lineX3 = [Time(minInx_stp) Time(maxInx_stp)];
-% lineY3 = [Amplitude(minInx_stp) Amplitude(minInx_stp)];
-% line(lineX3, lineY3,Color="red");
 % 
-% lineX4 = [Time(maxInx_stp) Time(maxInx_stp)];
-% lineY4 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
-% line(lineX4, lineY4,Color="red");
+% hold off;
 % 
-% lineX5 = [Time(minInx_stp) Time(minInx_stp)];
-% lineY5 = [Amplitude(minInx_stp) Amplitude(maxInx_stp)];
-% line(lineX5, lineY5,Color="red");
-
-% motorPotential = Amplitude(maxInx_stp) - Amplitude(minInx_stp);
-% txt = ['Potential: ' num2str(motorPotential) ' mV'];
-% text(Time(minInx_stp),Amplitude(minInx_stp)-0.40,txt);
-
-%hold on;
-% [px,py]= ginput(1);
-% plot(px,py,'*');
-%buton= 0;
-cnt = 0;
-roi_x=zeros;
-roi_y=zeros;
-while 1
-    [px,py,buton]= ginput(1);
-    plot(px,py,'*');
-    lineX6 = [px px];
-    lineY6 = [py-0.5 py+0.5];
-    line(lineX6, lineY6,Color="red");
-    if buton == 1
-        cnt = cnt+1;
-        roi_x(cnt)=px;
-        roi_y(cnt)=py;
-        %buton =0;
-        if cnt ==2 
-            break;
-        end
-    end
-end
-
-[~,startTime]=min(abs(Time-roi_x(1)));  % find index where the roi_x(1) is closest
-[~,endTime]=min(abs(Time-roi_x(2)));
-%startTime = find(Time == roi_x(1));
-%endTime = find(Time == roi_x(2));
-stp = startTime;
-cutAmp = Amplitude(stp:endTime);
-[maxVal,maxInx] = max(cutAmp);
-[minVal,minInx] = min(cutAmp);
-maxInx_stp = maxInx+stp-1;
-minInx_stp = minInx+stp-1;
-plot(Time(maxInx_stp), Amplitude(maxInx_stp), '-o');
-hold on;
-plot(Time(minInx_stp), Amplitude(minInx_stp), '-o');
-
-hold off;
-

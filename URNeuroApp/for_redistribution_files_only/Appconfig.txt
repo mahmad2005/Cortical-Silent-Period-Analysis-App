@@ -1,0 +1,5 @@
+30	FrqPass
+0.021	ThLvl
+0.06	SPsearch
+0.0032044	0.097017	ROI
+1199	SampleSize
