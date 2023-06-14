@@ -1,11 +1,11 @@
 clf;
-SampleNumber = 2;
-PadelThreshold = 2;
+SampleNumber = 3;
+PadelThreshold = 5;
 BeepThreshold = 2; % 0.04
 
-%Data =readcell("dmm_lnhc.txt");
+Data =readcell("E:\Personal\Study\CoOp Work\Participants\Toe Tapping\DMM\dmm\New\dmm_hnlc.txt");
 %Data =readcell("DMM_lnlc.txt");
-Data =readcell("dmm_hnlc.txt");
+%Data =readcell("dmm_hnlc.txt");
 %startPoint = 7; %7, 2013, 4019, 6025, 8031, 10037
 %endPoint = startPoint+100999;
 TimeFull = Data(1:length(Data), 1);
@@ -140,11 +140,16 @@ plot(Time, Beep);
 
 j=1;
 Beep_to_Resp = zeros;
+number_of_beep = zeros;
 for i = 1:length(BeepPositionBefResp)
     Beep_to_Resp(i) = Time(ResponsePosition(i)) - Time(BeepPositionBefResp(i));
+    number_of_beep(i) = i;
 end 
 
 
 
 f4 = figure;
-plot(BeepPositionBefResp,Beep_to_Resp);
+plot(BeepPositionBefResp,number_of_beep);
+
+figure;
+plot(number_of_beep, number_of_beep);
