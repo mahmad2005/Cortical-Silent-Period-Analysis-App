@@ -3,15 +3,15 @@
     <param.appname>URNeuroApp</param.appname>
     <param.icon />
     <param.icons />
-    <param.version>4.0</param.version>
+    <param.version>1.0</param.version>
     <param.authnamewatermark>UofR</param.authnamewatermark>
     <param.email />
-    <param.company />
-    <param.summary />
-    <param.description />
+    <param.company>URNeuroLAB</param.company>
+    <param.summary>URNeuroApp</param.summary>
+    <param.description>Last Update: 23 June 2023, Choose save location</param.description>
     <param.screenshot />
     <param.guid />
-    <param.installpath.string>\URNeuroApp\</param.installpath.string>
+    <param.installpath.string>\URNeuroLAB\URNeuroApp\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
     <param.logo />
     <param.install.notes />
@@ -45,10 +45,8 @@
     <unset>
       <param.icon />
       <param.icons />
+      <param.version />
       <param.email />
-      <param.company />
-      <param.summary />
-      <param.description />
       <param.screenshot />
       <param.guid />
       <param.installpath.string />
@@ -83,7 +81,11 @@
     <fileset.resources />
     <fileset.package />
     <fileset.depfun>
+      <file>E:\Personal\Study\CoOp Work\CSP_App\calib.mlapp</file>
+      <file>E:\Personal\Study\CoOp Work\CSP_App\CSP_report.txt</file>
+      <file>${PROJECT_ROOT}\app2.mlapp</file>
       <file>${PROJECT_ROOT}\Appconfig.txt</file>
+      <file>E:\Personal\Study\CoOp Work\CSP_App\SampleConfig.mlapp</file>
     </fileset.depfun>
     <build-deliverables>
       <file location="${PROJECT_ROOT}\URNeuroApp\for_testing" name="splash.png" optional="false">E:\Personal\Study\CoOp Work\CSP_App\ITT\URNeuroApp\for_testing\splash.png</file>

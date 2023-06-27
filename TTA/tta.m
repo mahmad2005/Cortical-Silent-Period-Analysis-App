@@ -4,7 +4,7 @@ PadelThreshold = 5;
 BeepThreshold = 2; % 0.04
 
 Data =readcell("E:\Personal\Study\CoOp Work\Participants\Toe Tapping\DMM\dmm\New\dmm_hnlc.txt");
-%Data =readcell("DMM_lnlc.txt");
+%Data =readcell ("DMM_lnlc.txt");
 %Data =readcell("dmm_hnlc.txt");
 %startPoint = 7; %7, 2013, 4019, 6025, 8031, 10037
 %endPoint = startPoint+100999;

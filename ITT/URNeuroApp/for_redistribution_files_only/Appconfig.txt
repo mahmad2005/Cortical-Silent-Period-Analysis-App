@@ -3,3 +3,5 @@
 0.06	SPsearch
 0.010166	0.051602	ROI
 1999	SampleSize
+-4.0679	ITT_Threshold
+0.17077	ITT_ROI_after_firstStimulation

@@ -2,4 +2,4 @@
 0.021	ThLvl
 0.06	SPsearch
 0.010166	0.051602	ROI
-1199	SampleSize
+1999	SampleSize
