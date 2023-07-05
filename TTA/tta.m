@@ -1,5 +1,5 @@
 clf;
-SampleNumber = 3;
+SampleNumber = 1;
 PadelThreshold = 5;
 BeepThreshold = 2; % 0.04
 
@@ -60,14 +60,14 @@ for i = 1:SampleLength %length(Beep)
     end
 end 
 
-refLine = zeros;
-for i = 1: SampleLength %length(Beep)
-
-    refLine(i) = BeepThreshold;
-%     if isnan(BeepD(i))
-%         BeepD(i) = Foot_PadelD(i-1);
-%     end
-end 
+refLine = zeros(1, SampleLength)+BeepThreshold;
+% for i = 1: SampleLength %length(Beep)
+% 
+%     refLine(i) = BeepThreshold;
+% %     if isnan(BeepD(i))
+% %         BeepD(i) = Foot_PadelD(i-1);
+% %     end
+% end 
 
 BeepPosition = zeros;
 BeepDetected = 0;
@@ -151,5 +151,5 @@ end
 f4 = figure;
 plot(BeepPositionBefResp,number_of_beep);
 
-figure;
-plot(number_of_beep, number_of_beep);
+f5 = figure;
+plot(number_of_beep, Beep_to_Resp);
