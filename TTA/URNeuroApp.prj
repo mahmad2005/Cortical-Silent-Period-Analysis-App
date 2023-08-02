@@ -1,15 +1,20 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration file="E:\Personal\Study\CoOp Work\CSP_App\TTA\URNeuroApp.prj" location="E:\Personal\Study\CoOp Work\CSP_App\TTA" name="URNeuroApp" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="1577370424" file="E:\Personal\Study\CoOp Work\CSP_App\TTA\URNeuroApp.prj" location="E:\Personal\Study\CoOp Work\CSP_App\TTA" name="URNeuroApp" preferred-package-location="E:\Personal\Study\CoOp Work\CSP_App\TTA\URNeuroApp\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>URNeuroApp</param.appname>
-    <param.icon />
-    <param.icons />
-    <param.version>5.0</param.version>
+    <param.icon>${PROJECT_ROOT}\URNeuroApp_resources\icon.ico</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_32.png</file>
+      <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_16.png</file>
+    </param.icons>
+    <param.version>6.00</param.version>
     <param.authnamewatermark>MARUF AHMAD</param.authnamewatermark>
     <param.email />
     <param.company>UofR</param.company>
     <param.summary />
-    <param.description />
-    <param.screenshot />
+    <param.description>updated on 2 August 2023</param.description>
+    <param.screenshot>E:\Personal\Study\CoOp Work\CSP_App\image\icon.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\UofR\URNeuroApp\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
@@ -43,12 +48,8 @@
 	 -?  print help on how to use the application 
 	 input arguments</param.help.text>
     <unset>
-      <param.icon />
-      <param.icons />
       <param.email />
       <param.summary />
-      <param.description />
-      <param.screenshot />
       <param.guid />
       <param.installpath.string />
       <param.installpath.combo />
@@ -82,8 +83,12 @@
     <fileset.resources />
     <fileset.package />
     <fileset.depfun>
-      <file>${PROJECT_ROOT}\app2.mlapp</file>
-      <file>${PROJECT_ROOT}\Appconfig.txt</file>
+      <file>E:\Personal\Study\CoOp Work\CSP_App\app2.mlapp</file>
+      <file>E:\Personal\Study\CoOp Work\CSP_App\Appconfig.txt</file>
+      <file>E:\Personal\Study\CoOp Work\CSP_App\calib.mlapp</file>
+      <file>E:\Personal\Study\CoOp Work\CSP_App\CSP_report.txt</file>
+      <file>E:\Personal\Study\CoOp Work\CSP_App\SampleConfig.mlapp</file>
+      <file>${PROJECT_ROOT}\icon.png</file>
     </fileset.depfun>
     <build-deliverables>
       <file location="${PROJECT_ROOT}\URNeuroApp\for_testing" name="splash.png" optional="false">E:\Personal\Study\CoOp Work\CSP_App\TTA\URNeuroApp\for_testing\splash.png</file>
@@ -99,8 +104,8 @@
         <toolbox name="gpucoder" />
         <toolbox name="fixedpoint" />
         <toolbox name="matlabhdlcoder" />
-        <toolbox name="polyspacebugfinder" />
         <toolbox name="neuralnetwork" />
+        <toolbox name="polyspacebugfinder" />
       </toolboxes>
       <toolbox>
         <matlabcoder>
@@ -128,14 +133,14 @@
         </matlabhdlcoder>
       </toolbox>
       <toolbox>
-        <polyspacebugfinder>
-          <enabled>true</enabled>
-        </polyspacebugfinder>
-      </toolbox>
-      <toolbox>
         <neuralnetwork>
           <enabled>true</enabled>
         </neuralnetwork>
+      </toolbox>
+      <toolbox>
+        <polyspacebugfinder>
+          <enabled>true</enabled>
+        </polyspacebugfinder>
       </toolbox>
     </matlab>
     <platform>

@@ -1,0 +1,8 @@
+30	FrqPass
+0.021	ThLvl
+0.06	SPsearch
+0.010166	0.051602	ROI
+799	SampleSize
+-3	ITT_Threshold
+1	ITT_ROI_after_firstStimulation
+0.2	MEPA_Threshold

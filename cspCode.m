@@ -5,10 +5,12 @@
 % Time = plainData.Time(startPoint:endPoint);
 % Amplitude = plainData.Amplitude(startPoint:endPoint);
 
-Data =readcell("CSP_FDI_PRE_01.txt");
+%Data =readcell("CSP_FDI_PRE_01.txt");
+Data =readcell("TMS_CSP_03232022_pre.txt");
 nn = 1;
-startPoint = 7*nn+(1199*(nn-1)); %7, 2013, 4019, 6025, 8031, 10037
-endPoint = startPoint+1199;
+samplingFreq = 799; % 1199;
+startPoint = 7*nn+(samplingFreq*(nn-1)); %7, 2013, 4019, 6025, 8031, 10037
+endPoint = startPoint+samplingFreq;
 Time = Data(startPoint:endPoint,1);
 Amplitude = Data(startPoint:endPoint,2);
 
@@ -26,7 +28,9 @@ for i = 1:length(Amplitude)
     end
 end 
 
-AmplitudeD = AmplitudeD';
+SignalBias = (sum(AmplitudeD(1:10))/10)*(-1); %% AddBias to Signal for leveling it with zero
+
+AmplitudeD = AmplitudeD'+1;
 TimeD = TimeD';
 
 Amplitude = AmplitudeD;
@@ -151,11 +155,35 @@ text(spOnSet+0.01,-0.10,txt);
 
 [maxVal,maxInx] = max(Amplitude(zeroTime+20:length(Amplitude)));
 plot(Time(maxInx+zeroTime+19), maxVal, '-o');
+[FirstResp_minVal,FirstResp_minIndx] = min(AmplitudeD(zeroTime+41:length(AmplitudeD)));
+plot(Time(FirstResp_minIndx+zeroTime+40), FirstResp_minVal, '-o');
 
 
+FirstResp_minIndx = FirstResp_minIndx+zeroTime+40; 
 
+[MinBefStim, MinIdx] = min(AmplitudeD(1:150));
+MinBefStim = MinBefStim*0.5;
 
+plot(Time(MinIdx), MinBefStim, '-o');
 
+%This chunk added new 11.04.2023
+CSP_onSet_Indx = 0;
+CSP_onSet_Indx_Amp = 0;
+%OnsetArray =zeros;
+for i = 1:FirstResp_minIndx
+    if (AmplitudeD(FirstResp_minIndx+1-i)) >= MinBefStim
+        break;
+    end
+    CSP_onSet_Indx = FirstResp_minIndx+1-i;
+    CSP_onSet_Indx_Amp = AmplitudeD(FirstResp_minIndx+1-i);
+    %OnsetArray(i)  = AmplitudeD(FirstResp_minIndx+1-i);
+end
+
+plot(Time(CSP_onSet_Indx), CSP_onSet_Indx_Amp, '-o');
+plot(Time(10), 0, '-o');
+                    
+                    
+                    
 
 % 
 % 
