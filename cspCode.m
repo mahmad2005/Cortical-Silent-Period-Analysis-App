@@ -7,26 +7,31 @@
 
 %Data =readcell("CSP_FDI_PRE_01.txt");
 Data =readcell("TMS_CSP_03232022_pre.txt");
-nn = 1;
+Data2 =readtable("TMS_CSP_03232022_pre.txt",'PreserveVariableNames',true);
+nn = 20;
 samplingFreq = 799; % 1199;
-startPoint = 7*nn+(samplingFreq*(nn-1)); %7, 2013, 4019, 6025, 8031, 10037
+startPoint = 1+((samplingFreq+7)*(nn-1)); %7, 2013, 4019, 6025, 8031, 10037
 endPoint = startPoint+samplingFreq;
-Time = Data(startPoint:endPoint,1);
-Amplitude = Data(startPoint:endPoint,2);
+Time = Data2(startPoint:endPoint,1);
+Amplitude = Data2(startPoint:endPoint,2);
 
-TimeD =zeros;
-for i = 1:length(Time)
-    TimeD(i) = Time{i};
-end 
+% TimeD =zeros;
+% for i = 1:length(Time)
+%     TimeD(i) = Time{i};
+% end 
+% 
+% AmplitudeD=zeros;
+% for i = 1:length(Amplitude)
+% 
+%     AmplitudeD(i) = Amplitude{i};
+%     if isnan(AmplitudeD(i))
+%         AmplitudeD(i) = AmplitudeD(i-1);
+%     end
+% end 
 
-AmplitudeD=zeros;
-for i = 1:length(Amplitude)
+TimeD = Time{:,:};
+AmplitudeD = Amplitude{:,:};
 
-    AmplitudeD(i) = Amplitude{i};
-    if isnan(AmplitudeD(i))
-        AmplitudeD(i) = AmplitudeD(i-1);
-    end
-end 
 
 SignalBias = (sum(AmplitudeD(1:10))/10)*(-1); %% AddBias to Signal for leveling it with zero
 
