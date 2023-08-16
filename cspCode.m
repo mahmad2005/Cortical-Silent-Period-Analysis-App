@@ -7,9 +7,10 @@
 
 %Data =readcell("CSP_FDI_PRE_01.txt");
 Data =readcell("TMS_CSP_03232022_pre.txt");
-Data2 =readtable("TMS_CSP_03232022_pre.txt",'PreserveVariableNames',true);
+%Data2 =readtable("TMS_CSP_03232022_pre.txt",'PreserveVariableNames',true);
+Data2 =readtable("data2.txt",'PreserveVariableNames',true);
 nn = 20;
-samplingFreq = 799; % 1199;
+samplingFreq = 1999; % 1199;
 startPoint = 1+((samplingFreq+7)*(nn-1)); %7, 2013, 4019, 6025, 8031, 10037
 endPoint = startPoint+samplingFreq;
 Time = Data2(startPoint:endPoint,1);
