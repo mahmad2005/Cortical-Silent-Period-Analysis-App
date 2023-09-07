@@ -8,14 +8,14 @@
       <file>${PROJECT_ROOT}\URNeuroApp_1_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\URNeuroApp_1_resources\icon_16.png</file>
     </param.icons>
-    <param.version>6.5</param.version>
-    <param.authnamewatermark />
+    <param.version>6.6</param.version>
+    <param.authnamewatermark>MARUF AHMAD</param.authnamewatermark>
     <param.email />
     <param.company>URNeuroLAB</param.company>
     <param.summary>Automatic Samplesize</param.summary>
     <param.description>changeable Th. updated 06.09..2023
 -bug fixed
-- No manually to input Samplesize. it will be taken autumatically.</param.description>
+- Autot sample size detection system for CSP,MEPA, TTA</param.description>
     <param.screenshot>${PROJECT_ROOT}\URNeuroApp\for_redistribution_files_only\splash.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\URNeuroLAB\URNeuroApp\</param.installpath.string>
@@ -52,9 +52,8 @@
  Description 
  	 changeable Th. updated 06.09..2023
 -bug fixed
-- No manually to input Samplesize. it will be taken autumatically.</param.help.text>
+- Autot sample size detection system for CSP,MEPA, TTA</param.help.text>
     <unset>
-      <param.authnamewatermark />
       <param.email />
       <param.guid />
       <param.installpath.string />
