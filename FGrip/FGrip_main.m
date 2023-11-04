@@ -1,5 +1,5 @@
 clear all;
-Data = readcell("E:\Personal\Study\CoOp Work\Participants\Force Grip Data\HNHC\trial1_block2.txt");
+Data = readcell("E:\Personal\Study\CoOp Work\Participants\Force Grip Data\HNHC\trial1_block1.txt");
  
  EMG = cell2mat(Data(8:end,1));
  Time = cell2mat(Data(8:end,4));
