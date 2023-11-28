@@ -13,10 +13,10 @@
     <param.email />
     <param.company>URNeuroLAB</param.company>
     <param.summary>Automatic Samplesize</param.summary>
-    <param.description>changeable Th. updated 03.11..2023
+    <param.description>changeable Th. updated 27.11..2023
 -M-Reflex Added
 -H-reflex data save
-- H-graph</param.description>
+- voltage data save corrected</param.description>
     <param.screenshot>${PROJECT_ROOT}\URNeuroApp\for_redistribution_files_only\splash.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\URNeuroLAB\URNeuroApp\</param.installpath.string>
@@ -51,10 +51,10 @@
 	 -?  print help on how to use the application 
 	 input arguments 
  Description 
- 	 changeable Th. updated 03.11..2023
+ 	 changeable Th. updated 27.11..2023
 -M-Reflex Added
 -H-reflex data save
-- H-graph</param.help.text>
+- voltage data save corrected</param.help.text>
     <unset>
       <param.email />
       <param.guid />
