@@ -16,7 +16,7 @@
     <param.description>changeable Th. updated 28.11..2023
 -M-Reflex Added
 -H-reflex data save
--h and m max sample number added</param.description>
+-- clear the display</param.description>
     <param.screenshot>${PROJECT_ROOT}\URNeuroApp\for_redistribution_files_only\splash.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\URNeuroLAB\URNeuroApp\</param.installpath.string>
@@ -54,7 +54,7 @@
  	 changeable Th. updated 28.11..2023
 -M-Reflex Added
 -H-reflex data save
--h and m max sample number added</param.help.text>
+-- clear the display</param.help.text>
     <unset>
       <param.email />
       <param.guid />
