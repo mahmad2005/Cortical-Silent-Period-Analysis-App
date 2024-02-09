@@ -8,15 +8,15 @@
       <file>${PROJECT_ROOT}\URNeuroApp_1_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\URNeuroApp_1_resources\icon_16.png</file>
     </param.icons>
-    <param.version>7.0</param.version>
+    <param.version>7.1</param.version>
     <param.authnamewatermark>MARUF AHMAD</param.authnamewatermark>
     <param.email />
     <param.company>URNeuroLAB</param.company>
     <param.summary>Automatic Samplesize</param.summary>
-    <param.description>changeable Th. updated 06.02..2024
+    <param.description>changeable Th. updated 08.08..2024
 -M-Reflex Added
 -H-reflex data save
--- H-reflex fifty percent detection updated with linearfit</param.description>
+-- H reflex data save updated</param.description>
     <param.screenshot>${PROJECT_ROOT}\URNeuroApp\for_redistribution_files_only\splash.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\URNeuroLAB\URNeuroApp\</param.installpath.string>
