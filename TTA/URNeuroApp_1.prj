@@ -16,7 +16,8 @@
     <param.description>changeable Th. updated 08.08..2024
 -M-Reflex Added
 -H-reflex data save
--- H reflex data save updated</param.description>
+-- H reflex data save updated
+-- TTA auto threshold added</param.description>
     <param.screenshot>${PROJECT_ROOT}\URNeuroApp\for_redistribution_files_only\splash.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\URNeuroLAB\URNeuroApp\</param.installpath.string>
@@ -51,10 +52,11 @@
 	 -?  print help on how to use the application 
 	 input arguments 
  Description 
- 	 changeable Th. updated 06.02..2024
+ 	 changeable Th. updated 08.08..2024
 -M-Reflex Added
 -H-reflex data save
--- H-reflex fifty percent detection updated with linearfit</param.help.text>
+-- H reflex data save updated
+-- TTA auto threshold added</param.help.text>
     <unset>
       <param.email />
       <param.guid />
