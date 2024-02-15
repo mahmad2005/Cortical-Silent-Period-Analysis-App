@@ -16,8 +16,7 @@
     <param.description>changeable Th. updated 08.08..2024
 -M-Reflex Added
 -H-reflex data save
--- H reflex data save updated
--- TTA auto threshold added</param.description>
+-- H reflex data save updated</param.description>
     <param.screenshot>${PROJECT_ROOT}\URNeuroApp\for_redistribution_files_only\splash.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\URNeuroLAB\URNeuroApp\</param.installpath.string>
