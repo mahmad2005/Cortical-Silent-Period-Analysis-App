@@ -1,4 +1,0 @@
-SN 		Beep Number 	Response Time
-1 		 0	0
-SN 		ITA_BeepPositionBefResp 	Beep Number Time
-1 		 0	0
