@@ -20,7 +20,7 @@
 % end
 
 clear all;
-BB = [1,2,3,4,5,12,1,6,8,5,6,4,6,2,6,4,28,1,12,16,1,2,3,4,5,6,1,25,38,26,29,2,3,4,6,8,37];
+BB = [1,2,3,4,5,14,11,12,13,11,13,11,12,13,1,6,8,5,6,4,6,2,6,4,28,1,12,16,1,2,3,4,5,6,1,25,38,26,29,2,3,4,6,8,37];
 
 % Initialize threshold and span
 threshold = 10; % Values greater than this are considered
@@ -70,3 +70,42 @@ disp('Cluster Max Indices:');
 disp(clusterMaxIndices);
 
 onetwo = findClusterMaxIndices(BB,10,5);
+
+
+
+span_counter_active = 0;
+span_counter = 0;
+span = 5;
+th =10;
+temp_numb = 0;
+temp_indx = 0;
+j=1;
+Spike_numb = zeros;
+Spike_indx = zeros;
+
+for i = 1:length(BB)
+    if BB(i) > th
+        if BB(i) > temp_numb
+            span_counter_active = 1;
+            span_counter = span;
+            temp_numb = BB(i);
+            temp_indx = i;
+        end
+    else
+        if span_counter_active == 1 
+            span_counter = span_counter -1;
+        end
+    end
+    if i == length(BB)
+        span_counter = 0;
+        disp('used');
+    end
+    if (span_counter == 0) && (span_counter_active ==1)
+        Spike_numb(j) = temp_numb;
+        Spike_indx(j) = temp_indx;
+        temp_numb = 0;
+        span_counter =0;
+        span_counter_active = 0;
+        j = j+1;
+    end 
+end

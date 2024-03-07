@@ -8,16 +8,17 @@
       <file>${PROJECT_ROOT}\URNeuroApp_1_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\URNeuroApp_1_resources\icon_16.png</file>
     </param.icons>
-    <param.version>7.2</param.version>
+    <param.version>7.3</param.version>
     <param.authnamewatermark>MARUF AHMAD</param.authnamewatermark>
     <param.email />
     <param.company>URNeuroLAB</param.company>
     <param.summary>Automatic Samplesize</param.summary>
-    <param.description>changeable Th. updated 02.03..2024
+    <param.description>changeable Th. updated 07.03.2024
 -M-Reflex Added
 -H-reflex data save
 -- H reflex data save updated
--- TTA_CSP updated with correction of stimulation detection</param.description>
+-- TTA_CSP updated with correction of stimulation detection
+-- H-Reflex Slope and Tangent Line added</param.description>
     <param.screenshot>${PROJECT_ROOT}\URNeuroApp\for_redistribution_files_only\splash.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\URNeuroLAB\URNeuroApp\</param.installpath.string>
@@ -50,7 +51,14 @@
 	 
  Input Arguments 
 	 -?  print help on how to use the application 
-	 input arguments</param.help.text>
+	 input arguments 
+ Description 
+ 	 changeable Th. updated 07.03.2024
+-M-Reflex Added
+-H-reflex data save
+-- H reflex data save updated
+-- TTA_CSP updated with correction of stimulation detection
+-- H-Reflex Slope and Tangent Line added</param.help.text>
     <unset>
       <param.email />
       <param.guid />
@@ -88,10 +96,12 @@
     <fileset.depfun>
       <file>${PROJECT_ROOT}\app2.mlapp</file>
       <file>${PROJECT_ROOT}\Appconfig.txt</file>
+      <file>${PROJECT_ROOT}\calib.mlapp</file>
       <file>${PROJECT_ROOT}\findClusterMaxIndices.m</file>
       <file>${PROJECT_ROOT}\gripForce.mlapp</file>
       <file>${PROJECT_ROOT}\hreflex.m</file>
       <file>${PROJECT_ROOT}\icon.png</file>
+      <file>${PROJECT_ROOT}\SampleConfig.mlapp</file>
     </fileset.depfun>
     <build-deliverables>
       <file location="${PROJECT_ROOT}\URNeuroApp_1\for_testing" name="URNeuroApp.exe" optional="false">E:\Personal\Study\CoOp Work\CSP_App\TTA\URNeuroApp_1\for_testing\URNeuroApp.exe</file>
