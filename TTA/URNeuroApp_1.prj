@@ -8,17 +8,19 @@
       <file>${PROJECT_ROOT}\URNeuroApp_1_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\URNeuroApp_1_resources\icon_16.png</file>
     </param.icons>
-    <param.version>7.3</param.version>
+    <param.version>7.4</param.version>
     <param.authnamewatermark>MARUF AHMAD</param.authnamewatermark>
     <param.email />
     <param.company>URNeuroLAB</param.company>
     <param.summary>Automatic Samplesize</param.summary>
-    <param.description>changeable Th. updated 07.03.2024
+    <param.description>changeable Th. updated 13.03..2024
 -M-Reflex Added
 -H-reflex data save
 -- H reflex data save updated
 -- TTA_CSP updated with correction of stimulation detection
--- H-Reflex Slope and Tangent Line added</param.description>
+-- H-Reflex Slope and Tangent Line added
+-- CSP data saving for ML 
+-- ITT update</param.description>
     <param.screenshot>${PROJECT_ROOT}\URNeuroApp\for_redistribution_files_only\splash.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\URNeuroLAB\URNeuroApp\</param.installpath.string>
@@ -117,8 +119,8 @@
         <toolbox name="gpucoder" />
         <toolbox name="fixedpoint" />
         <toolbox name="matlabhdlcoder" />
-        <toolbox name="neuralnetwork" />
         <toolbox name="polyspacebugfinder" />
+        <toolbox name="neuralnetwork" />
       </toolboxes>
       <toolbox>
         <matlabcoder>
@@ -146,14 +148,14 @@
         </matlabhdlcoder>
       </toolbox>
       <toolbox>
-        <neuralnetwork>
-          <enabled>true</enabled>
-        </neuralnetwork>
-      </toolbox>
-      <toolbox>
         <polyspacebugfinder>
           <enabled>true</enabled>
         </polyspacebugfinder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
       </toolbox>
     </matlab>
     <platform>
