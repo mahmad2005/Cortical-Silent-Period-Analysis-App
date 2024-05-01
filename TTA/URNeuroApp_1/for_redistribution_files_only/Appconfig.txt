@@ -1,0 +1,9 @@
+30	FrqPass
+0.021	ThLvl
+0.06	SPsearch
+0	0	ROI
+1199	SampleSize
+-3	ITT_Threshold
+1	ITT_ROI_after_firstStimulation
+0.2	MEPA_Threshold
+E:\Personal\Study\CoOp Work\CSP_App\Hreflex\Extracted\	Last Filepath
