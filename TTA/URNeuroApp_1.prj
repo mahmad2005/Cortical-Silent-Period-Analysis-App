@@ -13,7 +13,7 @@
     <param.email />
     <param.company>URNeuroLAB</param.company>
     <param.summary>Automatic Samplesize</param.summary>
-    <param.description>changeable Th. updated 01.05.2024
+    <param.description>changeable Th. updated 16.05..2024
 -M-Reflex Added
 -H-reflex data save
 -- H reflex data save updated
@@ -22,7 +22,7 @@
 -- CSP data saving for ML 
 -- ITT update
 -- update app to remember the last directory accessed for file choosing
--- Fixed HReflex Bug</param.description>
+-- No MEPA results added to the save file</param.description>
     <param.screenshot>${PROJECT_ROOT}\URNeuroApp\for_redistribution_files_only\splash.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\URNeuroLAB\URNeuroApp\</param.installpath.string>
@@ -57,7 +57,7 @@
 	 -?  print help on how to use the application 
 	 input arguments 
  Description 
- 	 changeable Th. updated 01.05.2024
+ 	 changeable Th. updated 26.03..2024
 -M-Reflex Added
 -H-reflex data save
 -- H reflex data save updated
@@ -66,7 +66,7 @@
 -- CSP data saving for ML 
 -- ITT update
 -- update app to remember the last directory accessed for file choosing
--- Fixed HReflex Bug</param.help.text>
+-- up</param.help.text>
     <unset>
       <param.email />
       <param.guid />
