@@ -20,7 +20,7 @@ function top_indices = getAscendedSignificantPeaksIndices(data, min_peak_distanc
 
 
     % Sort peaks by value (most negative) and get the indices of the top three peaks
-    [sorted_peaks, sort_idx] = sort(negative_peaks, 'ascend'); % Ascend to get most negative values
+    [~, sort_idx] = sort(negative_peaks, 'ascend'); % Ascend to get most negative values
     
     top_indices = locs(sort_idx);
 end 

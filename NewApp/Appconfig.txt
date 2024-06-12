@@ -1,9 +1,10 @@
 30	FrqPass
 0.021	ThLvl
 0.06	SPsearch
-0	0	ROI
+0.020442	0.1116	ROI
 1199	SampleSize
 -4.3644	ITT_Threshold
-1.1699	ITT_ROI_after_firstStimulation
+0.31707	ITT_ROI_after_firstStimulation
 0.2	MEPA_Threshold
-E:\Personal\Study\CoOp Work\CSP_App\ITT\	Last Filepath
+E:\Personal\Study\CoOp Work\Participants\P05\POST\extracted\	Last Filepath
+E:\Personal\Study\CoOp Work\Participants\P05\POST\extracted\result\	Last_Filepath_for_save
