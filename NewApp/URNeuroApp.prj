@@ -1,14 +1,19 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration file="E:\Personal\Study\CoOp Work\CSP_App\NewApp\URNeuroApp.prj" location="E:\Personal\Study\CoOp Work\CSP_App\NewApp" name="URNeuroApp" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="1952105593" file="E:\Personal\Study\CoOp Work\CSP_App\NewApp\URNeuroApp.prj" location="E:\Personal\Study\CoOp Work\CSP_App\NewApp" name="URNeuroApp" preferred-package-location="E:\Personal\Study\CoOp Work\CSP_App\NewApp\URNeuroApp\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>URNeuroApp</param.appname>
-    <param.icon />
-    <param.icons />
-    <param.version>7.6</param.version>
+    <param.icon>${PROJECT_ROOT}\URNeuroApp_resources\icon.ico</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_32.png</file>
+      <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_16.png</file>
+    </param.icons>
+    <param.version>7.7</param.version>
     <param.authnamewatermark>MARUF AHMAD</param.authnamewatermark>
     <param.email />
     <param.company />
     <param.summary />
-    <param.description>changeable Th. updated 16.05..2024
+    <param.description>changeable Th. updated 19.06..2024
 -M-Reflex Added
 -H-reflex data save
 -- H reflex data save updated
@@ -17,8 +22,10 @@
 -- CSP data saving for ML 
 -- ITT update
 -- update app to remember the last directory accessed for file choosing
--- No MEPA results added to the save file</param.description>
-    <param.screenshot />
+-- No MEPA results added to the save file
+-- H-reflex update
+-- save function update</param.description>
+    <param.screenshot>${PROJECT_ROOT}\icon.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\URNeuroApp\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
@@ -45,14 +52,16 @@
     <param.native.matlab>false</param.native.matlab>
     <param.checkbox>false</param.checkbox>
     <param.example />
-    <param.help.text />
+    <param.help.text>Syntax 
+	  -? 
+	 
+ Input Arguments 
+	 -?  print help on how to use the application 
+	 input arguments</param.help.text>
     <unset>
-      <param.icon />
-      <param.icons />
       <param.email />
       <param.company />
       <param.summary />
-      <param.screenshot />
       <param.guid />
       <param.installpath.string />
       <param.installpath.combo />
@@ -79,14 +88,21 @@
       <param.native.matlab />
       <param.checkbox />
       <param.example />
-      <param.help.text />
     </unset>
     <fileset.main>
       <file>${PROJECT_ROOT}\main.mlapp</file>
     </fileset.main>
     <fileset.resources />
     <fileset.package />
-    <fileset.depfun />
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\about.mlapp</file>
+      <file>${PROJECT_ROOT}\Appconfig.txt</file>
+      <file>${PROJECT_ROOT}\calib.mlapp</file>
+      <file>${PROJECT_ROOT}\findClusterMaxIndices.m</file>
+      <file>${PROJECT_ROOT}\getAscendedSignificantPeaksIndices.m</file>
+      <file>${PROJECT_ROOT}\gripForce.mlapp</file>
+      <file>${PROJECT_ROOT}\icon.png</file>
+    </fileset.depfun>
     <build-deliverables>
       <file location="${PROJECT_ROOT}\URNeuroApp\for_testing" name="URNeuroApp.exe" optional="false">E:\Personal\Study\CoOp Work\CSP_App\NewApp\URNeuroApp\for_testing\URNeuroApp.exe</file>
       <file location="${PROJECT_ROOT}\URNeuroApp\for_testing" name="splash.png" optional="false">E:\Personal\Study\CoOp Work\CSP_App\NewApp\URNeuroApp\for_testing\splash.png</file>
@@ -101,8 +117,8 @@
         <toolbox name="gpucoder" />
         <toolbox name="fixedpoint" />
         <toolbox name="matlabhdlcoder" />
-        <toolbox name="polyspacebugfinder" />
         <toolbox name="neuralnetwork" />
+        <toolbox name="polyspacebugfinder" />
       </toolboxes>
       <toolbox>
         <matlabcoder>
@@ -130,14 +146,14 @@
         </matlabhdlcoder>
       </toolbox>
       <toolbox>
-        <polyspacebugfinder>
-          <enabled>true</enabled>
-        </polyspacebugfinder>
-      </toolbox>
-      <toolbox>
         <neuralnetwork>
           <enabled>true</enabled>
         </neuralnetwork>
+      </toolbox>
+      <toolbox>
+        <polyspacebugfinder>
+          <enabled>true</enabled>
+        </polyspacebugfinder>
       </toolbox>
     </matlab>
     <platform>
