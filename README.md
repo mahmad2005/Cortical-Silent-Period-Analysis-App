@@ -1,14 +1,16 @@
-# Cortical-Silent-Period-Analysis-App
-This application analyse the electromyogram (EMG) signals and measures the duration of the cortical silent period (CSP) elicited by transcranial magnetic stimulation (TMS). 
-This application will be used in Neuroplasticity research. 
-MATLAB app designer is being used to develop the application.
-Once needs to have Matlab runtime 9.10 installed on their operating systems to run the Software. 
-The project is funded by the Neuroplasticity & Neurorehabilitation Research Lab at the University of Regina, Canada.
+# Cortical Silent Period Analysis App
+
+This application analyzes electromyogram (EMG) signals and measures the duration of the cortical silent period (CSP) elicited by transcranial magnetic stimulation (TMS). It is designed for use in neuroplasticity research.
+
+The application is developed using MATLAB App Designer. To run the software, MATLAB Runtime 9.10 must be installed on your operating system.
+
+This project is funded by the Neuroplasticity & Neurorehabilitation Research Lab at the University of Regina, Canada.
+
 https://drive.google.com/drive/u/0/folders/1AtKwsUIe6fCbBZ9dZL9jxMAtdVGsJAuI
 
 Project Folder: /NewApp
 
-# Cortical-Silent-Period
+# Cortical-Silent-Period-Analysis:
 
 ![CSP](images/CSP.png)
 
@@ -20,7 +22,7 @@ Project Folder: /NewApp
 
 ![ITT](images/ITT.png)
 
-# H-Reflex
+# H-Reflex:
 
 ![H-Reflex](images/Hreflex_1.png)
 
