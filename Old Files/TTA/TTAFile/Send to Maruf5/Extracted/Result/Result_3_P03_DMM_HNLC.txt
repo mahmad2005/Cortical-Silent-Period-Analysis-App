@@ -1,0 +1,12 @@
+SN 		Beep Number 	Response Time
+1 		 1	0.091
+2 		 2	0.162
+3 		 3	0.097
+4 		 4	0.56
+5 		 5	0.105
+SN 		ITA_BeepPositionBefResp 	Beep Number Time
+1 		 609	1
+2 		 4973	2
+3 		 13701	3
+4 		 18061	4
+5 		 22425	5
