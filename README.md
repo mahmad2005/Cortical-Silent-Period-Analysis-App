@@ -8,7 +8,7 @@ This project is funded by the Neuroplasticity & Neurorehabilitation Research Lab
 
 https://drive.google.com/drive/u/0/folders/1AtKwsUIe6fCbBZ9dZL9jxMAtdVGsJAuI
 
-Project Folder: /NewApp
+Project Folder: /NewApp/Sources
 
 # Cortical-Silent-Period-Analysis:
 
