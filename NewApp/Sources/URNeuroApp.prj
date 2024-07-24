@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="1952105593" file="E:\Personal\Study\CoOp Work\CSP_App\NewApp\URNeuroApp.prj" location="E:\Personal\Study\CoOp Work\CSP_App\NewApp" name="URNeuroApp" preferred-package-location="E:\Personal\Study\CoOp Work\CSP_App\NewApp\URNeuroApp\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="1952105593" file="E:\Personal\Study\CoOp Work\CSP_App\NewApp\Sources\URNeuroApp.prj" location="E:\Personal\Study\CoOp Work\CSP_App\NewApp\Sources" name="URNeuroApp" preferred-package-location="E:\Personal\Study\CoOp Work\CSP_App\NewApp\URNeuroApp\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>URNeuroApp</param.appname>
     <param.icon>${PROJECT_ROOT}\URNeuroApp_resources\icon.ico</param.icon>
     <param.icons>
@@ -8,12 +8,12 @@
       <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_16.png</file>
     </param.icons>
-    <param.version>7.7</param.version>
+    <param.version>7.9</param.version>
     <param.authnamewatermark>MARUF AHMAD</param.authnamewatermark>
     <param.email />
     <param.company />
     <param.summary />
-    <param.description>changeable Th. updated 19.06..2024
+    <param.description>changeable Th. updated 15.07..2024
 -M-Reflex Added
 -H-reflex data save
 -- H reflex data save updated
@@ -24,7 +24,9 @@
 -- update app to remember the last directory accessed for file choosing
 -- No MEPA results added to the save file
 -- H-reflex update
--- save function update</param.description>
+-- save function update
+-- H-reflex (%m-max) update
+-- slope at 50% for H-reflex(%m-max) raido graph</param.description>
     <param.screenshot>${PROJECT_ROOT}\icon.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\URNeuroApp\</param.installpath.string>
@@ -104,9 +106,9 @@
       <file>${PROJECT_ROOT}\icon.png</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\URNeuroApp\for_testing" name="URNeuroApp.exe" optional="false">E:\Personal\Study\CoOp Work\CSP_App\NewApp\URNeuroApp\for_testing\URNeuroApp.exe</file>
-      <file location="${PROJECT_ROOT}\URNeuroApp\for_testing" name="splash.png" optional="false">E:\Personal\Study\CoOp Work\CSP_App\NewApp\URNeuroApp\for_testing\splash.png</file>
-      <file location="${PROJECT_ROOT}\URNeuroApp\for_testing" name="readme.txt" optional="true">E:\Personal\Study\CoOp Work\CSP_App\NewApp\URNeuroApp\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\URNeuroApp\for_testing" name="splash.png" optional="false">E:\Personal\Study\CoOp Work\CSP_App\NewApp\Sources\URNeuroApp\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\URNeuroApp\for_testing" name="readme.txt" optional="true">E:\Personal\Study\CoOp Work\CSP_App\NewApp\Sources\URNeuroApp\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\URNeuroApp\for_testing" name="URNeuroApp.exe" optional="false">E:\Personal\Study\CoOp Work\CSP_App\NewApp\Sources\URNeuroApp\for_testing\URNeuroApp.exe</file>
     </build-deliverables>
     <workflow />
     <matlab>
