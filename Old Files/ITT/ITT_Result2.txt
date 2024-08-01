@@ -1,0 +1,2 @@
+Max 	First Peak 	Second Peak 	Control Peak 	iTT_A 	iTT_B 	iTT_C 
+6.3636 	 6.0914	5.2071	0.40644	-0.27219	-1.1566	0.53594
