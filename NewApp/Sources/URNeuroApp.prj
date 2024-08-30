@@ -8,7 +8,7 @@
       <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_16.png</file>
     </param.icons>
-    <param.version>7.9</param.version>
+    <param.version>7.8</param.version>
     <param.authnamewatermark>MARUF AHMAD</param.authnamewatermark>
     <param.email />
     <param.company />
@@ -26,7 +26,8 @@
 -- H-reflex update
 -- save function update
 -- H-reflex (%m-max) update
--- slope at 50% for H-reflex(%m-max) raido graph</param.description>
+-- slope at 50% for H-reflex(%m-max) raido graph
+-- update ITT - manually stimulation selection added</param.description>
     <param.screenshot>${PROJECT_ROOT}\icon.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\URNeuroApp\</param.installpath.string>
@@ -59,7 +60,23 @@
 	 
  Input Arguments 
 	 -?  print help on how to use the application 
-	 input arguments</param.help.text>
+	 input arguments 
+ Description 
+ 	 changeable Th. updated 15.07..2024
+-M-Reflex Added
+-H-reflex data save
+-- H reflex data save updated
+-- TTA_CSP updated with correction of stimulation detection
+-- H-Reflex Slope and Tangent Line added
+-- CSP data saving for ML 
+-- ITT update
+-- update app to remember the last directory accessed for file choosing
+-- No MEPA results added to the save file
+-- H-reflex update
+-- save function update
+-- H-reflex (%m-max) update
+-- slope at 50% for H-reflex(%m-max) raido graph
+-- update ITT - manually stimulation selection added</param.help.text>
     <unset>
       <param.email />
       <param.company />
