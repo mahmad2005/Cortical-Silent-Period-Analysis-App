@@ -3,8 +3,8 @@
 0.06	SPsearch
 0.020442	0.1116	ROI
 1199	SampleSize
--3.0256	ITT_Threshold
-0.31707	ITT_ROI_after_firstStimulation
+-8.1275	ITT_Threshold
+0.46045	ITT_ROI_after_firstStimulation
 0.2	MEPA_Threshold
-E:\Personal\Study\CoOp Work\data\Heather Foy\	Last Filepath
+E:\Personal\Study\CoOp Work\CSP_App\Old Files\ITT\	Last Filepath
 E:\Personal\Study\CoOp Work\data\Heather Foy\	Last_Filepath_for_save
