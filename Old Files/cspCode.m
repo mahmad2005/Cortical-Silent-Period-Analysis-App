@@ -6,9 +6,9 @@
 % Amplitude = plainData.Amplitude(startPoint:endPoint);
 
 %Data =readcell("CSP_FDI_PRE_01.txt");
-Data =readcell("TMS_CSP_03232022_pre.txt");
+%Data =readcell("TMS_CSP_03232022_pre.txt");
 %Data2 =readtable("TMS_CSP_03232022_pre.txt",'PreserveVariableNames',true);
-Data2 =readtable("data2.txt",'PreserveVariableNames',true);
+Data2 =readtable("FDI_CSP_PRE_09.txt",'PreserveVariableNames',true);
 nn = 20;
 samplingFreq = 1999; % 1199;
 startPoint = 1+((samplingFreq+7)*(nn-1)); %7, 2013, 4019, 6025, 8031, 10037
@@ -74,11 +74,11 @@ end
 %CSP_Idx = CSP_Idx;
 
 
-hpData = highpass(Amplitude,50,1e3);
+hpData = highpass(Amplitude,30,1e3);
 f2 = figure; plot(Time,hpData); %%%%%%%%%% figure 2
-hpData = highpass(hpData,50,1e3);
+hpData = highpass(hpData,30,1e3);
 f3 = figure; plot(Time,hpData); %%%%%%%%%% figure 3
-hpData = highpass(hpData,50,1e3);
+hpData = highpass(hpData,30,1e3);
 
 f4 = figure;                    %%%%%%%%%% figure 4
 f4.Position=[-30   250   560   420];

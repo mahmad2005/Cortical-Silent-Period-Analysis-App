@@ -8,12 +8,12 @@
       <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\URNeuroApp_resources\icon_16.png</file>
     </param.icons>
-    <param.version>7.9.2</param.version>
+    <param.version>8.0</param.version>
     <param.authnamewatermark>MARUF AHMAD</param.authnamewatermark>
     <param.email />
     <param.company />
     <param.summary />
-    <param.description>changeable Th. updated 15.07..2024
+    <param.description>changeable Th. updated 10.06..2025
 -M-Reflex Added
 -H-reflex data save
 -- H reflex data save updated
@@ -27,7 +27,7 @@
 -- save function update
 -- H-reflex (%m-max) update
 -- slope at 50% for H-reflex(%m-max) raido graph
--- ITT ROI after first stimulation bug fixed</param.description>
+-- MEPA update with stimulation type</param.description>
     <param.screenshot>${PROJECT_ROOT}\icon.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\URNeuroApp\</param.installpath.string>
@@ -62,7 +62,7 @@
 	 -?  print help on how to use the application 
 	 input arguments 
  Description 
- 	 changeable Th. updated 15.07..2024
+ 	 changeable Th. updated 10.06..2025
 -M-Reflex Added
 -H-reflex data save
 -- H reflex data save updated
@@ -76,7 +76,7 @@
 -- save function update
 -- H-reflex (%m-max) update
 -- slope at 50% for H-reflex(%m-max) raido graph
--- ITT ROI after first stimulation bug fixed</param.help.text>
+-- MEPA update with stimulation type</param.help.text>
     <unset>
       <param.email />
       <param.company />
